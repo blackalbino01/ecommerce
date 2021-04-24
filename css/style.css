@@ -10,10 +10,6 @@
 html {
   scroll-behavior: smooth;
 }
-li,
-ul {
-  list-style: none;
-}
 
 a {
   text-decoration: none;
@@ -32,18 +28,24 @@ h2{
   font-weight: 600;
 }
 
+li{
+  color: black;
+}
 
 #header{
 	min-height: 100vh;
 	background-color: #FFCD9E;
 }
 
-.nav_center {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
+.nav_header{
+  display: flex;
+  justify-content: space-between;
 }
-
-.logo {
-	width: 1.7em;
+.cart{
+  border: 1px solid transparent;
+  background-color: #FF9A3D;
+  text-align: center;
+  width: 70px;
+  height:54px;
+  border-radius: 20px;
 }
