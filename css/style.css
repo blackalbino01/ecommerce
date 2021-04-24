@@ -1,0 +1,49 @@
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1{
+	font-weight: 800;
+	font-size: 5vw;
+}
+h2{
+  font-weight: 600;
+}
+
+
+#header{
+	min-height: 100vh;
+	background-color: #FFCD9E;
+}
+
+.nav_center {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.logo {
+	width: 1.7em;
+}
