@@ -22,7 +22,6 @@ img {
 
 h1{
 	font-weight: 800;
-	font-size: 5vw;
 }
 h2{
   font-weight: 600;
@@ -40,12 +39,23 @@ li{
 .nav_header{
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
 }
-.cart{
-  border: 1px solid transparent;
+.cart button{
+  
   background-color: #FF9A3D;
+  border-radius: 50px;
+  text-align: left;
+}
+
+.shop_now{
   text-align: center;
-  width: 70px;
-  height:54px;
-  border-radius: 20px;
+  margin-top: -70px;
+
+}
+.shop_now button{
+    background-color: #FF9A3D;
+    color: white;
+    width: 20%;
+    max-width: 100%;
 }
