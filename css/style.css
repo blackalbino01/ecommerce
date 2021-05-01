@@ -154,19 +154,18 @@ button:hover,
     padding: 14px 40px;
 }
 
-}
-#about{
-  min-height: 40vh;
-  background-color: black;
-  padding: 80px 40px;
-
-}
-
-.about_container{
+.about{
+  background-color: var(--dark);
+  font-size: 22px;
+  color: var(--white);
   text-align: center;
-  color: white;
-  font-size: 25px;
 }
+.about .container {
+    max-width: 900px;
+    padding: 60px 40px;
+}
+
+
 
 .title{
   text-align: center;
