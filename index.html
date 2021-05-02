@@ -33,7 +33,7 @@
 				    		<a class="nav-link" href="#shop">Shop</a>
 				  		</li>
 				  	</ul>
-			  		<button class="nav-btn nav_flex">
+			  		<button class="btn nav-btn flex">
 			                <img src="images/cart.svg" class="cart_img" alt="cart image">
 			                <span class="item-qty-no">0</span>
 			        </button>
@@ -53,8 +53,8 @@
 						<img src="images/heroImage.png" alt="intro_img">
 					</div>
 				</div>
-				<div class="shop_now">
-					<a href="#shop" class="shop">SHOP NOW </a>
+				<div class="shop_now flex">
+					<a href="#shop" class="btn shop-now">SHOP NOW </a>
 				</div>
 			</div>
 		</div>
@@ -73,87 +73,91 @@
 		</section>
 		<!-- SHOP SECTION -->
 		<section class="section shop" id="shop">
-			<div class="product_listing">
-
-			 	<h1 class="title" style="font-weight:bolder">OUR GADGETS</h1>
-
-			  	<div class="grid-container">
-
-			    	<article id="1" class="product">
-						<img src="images/product1.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;500,000</p>
-						</div>
-
-						<h2>SAMSUNG TV</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			    	<article id="2" class="product">
-						<img src="images/product2.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;250,000</p>
-						</div>
-
-						<h2>PIXEL 4a</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			    	<article id="3" class="product">
-						<img src="images/product3.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;300,000</p>
-						</div>
-
-						<h2>PS 5</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			    	<article id="4" class="product">
-						<img src="images/product4.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;800,000</p>
-						</div>
-
-						<h2>MACBOOK AIR</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			    	<article id="5" class="product">
-						<img src="images/product5.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;500,000</p>
-						</div>
-
-						<h2>APPLE WATCH</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			    	<article id="6" class="product">
-						<img src="images/product6.png">
-						<div class="overlay">
-							<a class="overlay_title">Price</a>
-							<p class="desc">&#8358;500,000</p>
-						</div>
-
-						<h2>AIR PODS</h2>
-						<a href="#">ADD TO CART</a>
-			    	</article>
-			  	</div>
-			  <!-- end grid container -->
-
+			<div class="container">
+				 	<h1 class="heading">OUR GADGETS</h1>
+				  	<div class="grid-container">
+	                    <div class="product">
+                            <div class="product-box flex">
+                                <img src="images/product1.png" alt="SAMSUNG TV" class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">750,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">SAMSUNG TV</h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                    <div class="product">
+                            <div class="product-box flex">
+                                <img src="images/product2.png" alt="PIXEL 4a" class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">250,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">PIXEL 4a</h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                    <div class="product">
+                            <div class="product-box flex">
+                                <img src="images/product3.png" alt="PS 5" class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">300,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">PS 5</h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                    <div class="product">
+                            <div class="product-box flex">
+                                <img src="images/product4.png" alt="MACBOOK AIR " class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">800,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">MACBOOK AIR </h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                    <div class="product">
+                            <div class="product-box">
+                                <img src="images/product5.png" alt="APPLE WATCH" class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">95,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">APPLE WATCH</h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                    <div class="product">
+                            <div class="product-box flex">
+                                <img src="images/product6.png" alt="AIR PODS" class="product-img">
+                                <div class="price-box">
+                                    <p class="price-title flex"><u>Price</u></p>
+                                    <p class="price-tag">&#8358;<span class="price-value">70,000</span></p>
+                                </div>
+                            </div>
+                            <h3 class="product-name">AIR PODS</h3>
+                            <button class="btn btn-cart flex">ADD TO CART</button>
+	                    </div>
+	                </div>
+				  <!-- end grid container -->
 			</div>
 		</section>
 		<!-- FOOTER -->
 		<footer class="section footer" id="footer">
 			<div class="container">
-				<div class="footer_menu">
+				<div class="flex">
 					<div class="logo">
 						<img src="images/EMS.svg">
 					</div>
-					<p>
-						Designed and Crafted by a Frontend Ninja.
-					</p>
+					<div class="footer_content">
+						<p>
+							Designed and Crafted by a Frontend Ninja.
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>
