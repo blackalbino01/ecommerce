@@ -19,7 +19,6 @@
 html,body{
   scroll-behavior: smooth;
   height:100%;
-  width: 100%;
 }
 
 a {
@@ -42,6 +41,10 @@ ul {
 
 li{
   color: black;
+}
+.nav,.container{
+  margin: auto;
+  max-width: 1200px;
 }
 
 .btn {
@@ -107,7 +110,7 @@ button:hover,
 
 .intro_title {
     font-size: 5vw;
-    font-weight:bolder;
+    font-weight: bolder !important;
     color: var(--primary);
     padding-left: 80px;
 }
@@ -227,12 +230,13 @@ button:hover,
 }
 @media(max-width: 596px){
 
-
-    .container{  
-      padding: 0px 0px;
-    }
-
+  #header{
+    height: 100%;
   }
+  .container{
+    padding: 0px 0px;
+  }
+
   #header{
     height: 100%;
   }
@@ -243,14 +247,19 @@ button:hover,
   .logo{
     display: none;
   }
-  .nav_center{
-    padding: 10px 10px;
-  }
+  
   .intro-title{
-    margin:auto;
-    margin-bottom: 20px;
+    margin: auto;
   }
   .intro_title{
     font-size: 40px;
   }
+
+  .shop-now,.shop-now:hover{
+    color: var(--white);
+    font-weight: bold;
+    width:120px;
+    white-space: nowrap;
+    justify-content: center;
+}
 }
