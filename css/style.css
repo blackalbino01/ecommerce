@@ -230,13 +230,12 @@ button:hover,
 }
 @media(max-width: 596px){
 
-  #header{
-    height: 100%;
-  }
-  .container{
-    padding: 0px 0px;
-  }
 
+  .container {
+    max-width: 610px;
+    margin: auto;
+    padding: 0px 10px;
+  }
   #header{
     height: 100%;
   }
@@ -247,7 +246,6 @@ button:hover,
   .logo{
     display: none;
   }
-  
   .intro-title{
     margin: auto;
   }
