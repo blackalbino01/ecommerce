@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -15,30 +14,106 @@
 
 	<header id="header" class="header">
 		<!-- NAVIGATION -->
-			<nav class="nav_center">
-				<div class="nav_flex container">
-					<div class="logo">
-						<a href="index.html" class="logo nav-logo">
-							<img src="images/EMS.svg">
-						</a>
-					</div>
-					<ul class="nav_flex ">
-				  		<li class="nav-item">
-				    		<a class="nav-link" href="#header">Intro</a>
-				  		</li>
-				  		<li class="nav-item">
-				    		<a class="nav-link" href="#about">About</a>
-				  		</li>
-				  		<li class="nav-item">
-				    		<a class="nav-link" href="#shop">Shop</a>
-				  		</li>
-				  	</ul>
-			  		<button class="btn nav-btn cart_flex">
-			                <img src="images/cart.svg" class="cart_img" alt="cart image">
-			                <span class="item-qty-no">0</span>
-			        </button>
+		<nav class="nav_center">
+			<div class="nav_flex container">
+				<div class="logo">
+					<a href="index.html" class="logo nav-logo">
+						<img src="images/EMS.svg">
+					</a>
 				</div>
-			</nav>
+				<ul class="nav_flex ">
+			  		<li class="nav-item">
+			    		<a class="nav-link" href="#header">Intro</a>
+			  		</li>
+			  		<li class="nav-item">
+			    		<a class="nav-link" href="#about">About</a>
+			  		</li>
+			  		<li class="nav-item">
+			    		<a class="nav-link" href="#shop">Shop</a>
+			  		</li>
+			  	</ul>
+		  		<button class="btns btns-primary nav-btn cart_flex">
+		                <img src="images/cart.svg" class="cart_img" alt="cart image">
+		                <span class="item-qty-no">0</span>
+		        </button>
+			</div>
+		</nav>
+		<div class="success">
+            <div class="success-container">
+                <div class="success-body-container">
+                    <div class="success-summary-container">
+                        <h1 class="success-msg">
+                            Thank you, 
+                            <span class="customer-name"></span>, 
+                            Your Order Has Been Received
+                        </h1>
+                        <img src="./Images/check.svg" alt="success image" class="success-img">
+                        <p class="msg-ref"></p>
+                    </div>
+                    <h2 class="summary-title">Summary</h2>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Item</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody class="summary-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="success-btn-container btn-container">
+                        <button class="btns btns-primary ok-btn">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-container">
+                <input type="checkbox" name="checkbox" class="checkbox" id="checkbox">
+                <div class="cart-body-container">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th class="item-th">Item</th>
+                                    <th class="price-th">Price</th>
+                                    <th class="qty-th">Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody class="cart-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form-boy">
+                        <form action="" class="form">
+                            <input type="text" title="Name" name="name" class="form-input" id="name" placeholder="Your Name">
+                            <small class="error-txt"></small>
+                            <input type="email" title="Email" name="email" class="form-input" id="email" placeholder="Your Email">
+                            <small class="error-txt"></small>
+                            <input type="number" title="Phone number" name="number" class="form-input" id="phone-number"
+                            placeholder="Your Phone Number">
+                            <small class="error-txt"></small>
+                        </form>
+                    </div>
+                    <div class="total-amount-container">
+                        <h1 class="total-amount-txt">
+                            Total Amount to be Paid
+                        </h1>
+                        <p class="price-container">
+                            &#8358;<span class="total-price">0</span>
+                        </p>
+                    </div>
+                    <div class="cart-btn-container btn-container">
+                        <button class="btns cart-container-btn continue-btn btns-secondary-light">Continue Shopping</button>
+                        <button class="btns btns-primary cart-container-btn  pay-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+    	</div>
 		<!-- Intro -->
 		<div class="intro">
 			<div class="intro_content container">
@@ -53,7 +128,7 @@
 					</div>
 				</div>
 				<div class="shop_now flex">
-					<a href="#shop" class="btn shop-now flex">SHOP NOW</a>
+					<a href="#shop" class="btns btns-primary shop-now flex">SHOP NOW</a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +159,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">SAMSUNG TV</h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                    <div class="product">
                             <div class="product-box flex">
@@ -95,7 +170,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">PIXEL 4a</h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                    <div class="product">
                             <div class="product-box flex">
@@ -106,7 +181,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">PS 5</h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                    <div class="product">
                             <div class="product-box flex">
@@ -117,7 +192,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">MACBOOK AIR </h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                    <div class="product">
                             <div class="product-box">
@@ -128,7 +203,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">APPLE WATCH</h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                    <div class="product">
                             <div class="product-box flex">
@@ -139,7 +214,7 @@
                                 </div>
                             </div>
                             <h3 class="product-name">AIR PODS</h3>
-                            <button class="btn btn-cart flex">ADD TO CART</button>
+                            <button class="btns btns-primary btn-cart flex">ADD TO CART</button>
 	                    </div>
 	                </div>
 				  <!-- end grid container -->
@@ -162,5 +237,7 @@
 		</footer>
 	
 	</main>
+	<script type="text/javascript" src="./js/script.js"></script>
+
 </body>
 </html>
