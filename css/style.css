@@ -161,6 +161,7 @@ button:hover,
     background: var(--white);
     max-width: 700px;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 .checkbox {
     display: none;

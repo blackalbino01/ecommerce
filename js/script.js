@@ -217,7 +217,7 @@ const summaryClose = () => {
     summaryItemArr = [];
     tableClear(summaryTableBody);
     cartBtns.forEach(btn => {
-        if (btn.classList.contains('btn-secondary')) {
+        if (btn.classList.contains('btns-secondary')) {
             checkCartItem(btn);
         }
     });
@@ -289,11 +289,12 @@ document.addEventListener('click', (e) => {cartBlurClose(e);});
 checkCartQty();
 
 function payWithPaystack() {
-    let totalPriceNo = parseInt(totalPrice.innerText);
+    let totalPriceNo = totalPrice.innerText;
+    let finalTotalPriceNo = totalPriceNo.replace(/,/g,'');
     let handler = PaystackPop.setup({
         key: 'pk_test_08d2d1a95f28e6534dd378bfb0daac9b0d98b78e', // Replace with your public key
         email: email.value,
-        amount: totalPriceNo * 100,
+        amount: finalTotalPriceNo * 100,
         ref: '' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
         // label: "Optional string that replaces customer email"
         onClose: function () {
