@@ -76,7 +76,7 @@ const checkCartItem = (btn) => {
     }
 }
 const checkShopItem = (btn) => {
-    let shopItemBody = gridBox.children;
+    let shopItemBody = gridContainer.children;
     let cartProductName = btn.closest('tr').querySelector('.cart-product-name').innerText;
     let cartProductPrice = btn.closest('tr').querySelector('.price').innerText;
     for (let x = 0; x < shopItemBody.length; x++) {
@@ -123,7 +123,7 @@ const newItemRow = (productName, productPrice) => {
             <span class="qty-no">1</span>
             <button class="btn-qty add-btn btns-primary">+</button>
         </td>
-        <td><button class="btns-secondary-light remove-btn btn">Remove</button></td>
+        <td><button class="btns-secondary-light remove-btn btns">Remove</button></td>
     </tr>
     `;
     tableBody.innerHTML += newRow;
