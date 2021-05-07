@@ -57,7 +57,7 @@ const removeRow = (btn, productPrice) => {
     let qtyOfItemNo = qtyOfItem.textContent;
     let qtyOfItemPrice = parseInt(productPrice) * qtyOfItemNo;
     t -= qtyOfItemPrice;
-    totalPrice.innerHTML = t;
+    totalPrice.innerHTML = t.toLocaleString();
     itemRow.remove();
     checkCartQty();
     checkSn();
@@ -67,7 +67,8 @@ const checkCartItem = (btn) => {
     let shopProductName = btn.closest('.product').querySelector('.product-name').innerText;
     for (let x = 0; x < cartItemBody.length; x++) {
         let cartProductName = cartItemBody[x].querySelector('.cart-product-name').innerText;
-        let cartProductPrice = cartItemBody[x].querySelector('.price').innerText;
+        let price = cartItemBody[x].querySelector('.price').innerText;
+        let cartProductPrice = price.replace(/,/g,'');
         let cartProductBtn = cartItemBody[x].querySelector('.remove-btn');
         if (shopProductName === cartProductName) {
             removeRow(cartProductBtn, cartProductPrice);
@@ -78,7 +79,8 @@ const checkCartItem = (btn) => {
 const checkShopItem = (btn) => {
     let shopItemBody = gridContainer.children;
     let cartProductName = btn.closest('tr').querySelector('.cart-product-name').innerText;
-    let cartProductPrice = btn.closest('tr').querySelector('.price').innerText;
+    let price = btn.closest('tr').querySelector('.price').innerText;
+    let cartProductPrice = price.replace(/,/g,'');
     for (let x = 0; x < shopItemBody.length; x++) {
         let shopProductName = shopItemBody[x].querySelector('.product-name').innerText;
         let shopProductBtn = shopItemBody[x].querySelector('.btn-cart');
@@ -92,14 +94,15 @@ const checkShopItem = (btn) => {
 const getQty = (btn, op, minMaxValue) => {
     let qtyOfItem = btn.closest('tr').querySelector('.qty-no');
     let opSiblingBtn = btn.closest('tr').querySelector(`.${op}-btn`);
-    let productPrice = btn.closest('tr').querySelector('.price').innerText;
+    let price = btn.closest('tr').querySelector('.price').innerText;
+    let productPrice = price.replace(/,/g,'');
     let qtyOfItemNo = qtyOfItem.textContent;
     let qtyOfItemPrice = parseInt(productPrice) * qtyOfItemNo;
     t -= qtyOfItemPrice;
     (op === 'sub') ? qtyOfItemNo++ : qtyOfItemNo--;
     qtyOfItemPrice = parseInt(productPrice) * qtyOfItemNo;
     t += qtyOfItemPrice;
-    totalPrice.innerHTML = t;
+    totalPrice.innerHTML = t.toLocaleString();
     qtyOfItem.textContent = qtyOfItemNo;
     if (minMaxValue === 10) {
         (qtyOfItemNo >= minMaxValue) ? btn.disabled = true : btn.disabled = false;
@@ -113,11 +116,12 @@ const getQty = (btn, op, minMaxValue) => {
 const newItemRow = (productName, productPrice) => {
     sN = tableBody.childElementCount;
     sN++;
+    let price = productPrice.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
     let newRow = `
     <tr>
         <td class="s-no">${sN}</td>
         <td class="cart-product-name">${productName}</td>
-        <td>&#8358;<span class="price">${productPrice}</span></td>
+        <td>&#8358;<span class="price">${price}</span></td>
         <td class="cart-flex">
             <button class="btn-qty sub-btn btns-primary" disabled>-</button>
             <span class="qty-no">1</span>
@@ -140,7 +144,7 @@ const newItemRow = (productName, productPrice) => {
         btn.addEventListener('click', () => {checkShopItem(btn);});
     });
     t += parseInt(productPrice);
-    totalPrice.innerText = t;
+    totalPrice.innerText = t.toLocaleString();
     checkCartQty();
 }
 // Create new summary table row
@@ -248,7 +252,8 @@ const validatePhoneNumber = () => {
 cartBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         let productName = btn.closest('.product').querySelector('.product-name').textContent;
-        let productPrice = btn.closest('.product').querySelector('.price-value').textContent;
+        let price = btn.closest('.product').querySelector('.price-value').textContent;
+        let productPrice = price.replace(/,/g,'');
         if (btn.classList.contains('btns-primary')) {
             addToCart(btn);
             newItemRow(productName, productPrice);
@@ -262,7 +267,7 @@ okBtn.addEventListener('click', summaryClose);
 continueBtn.addEventListener('click', cartClose);
 payBtn.addEventListener('click', () => {
     if (tableBody.childElementCount === 0) {
-        console.log('no item');
+        alert('no item');
     } else {
         formInputs.forEach(formInput => {
             (formInput.value === '') ? showError(formInput, `${formInput.title} cannot be blank`) : formInput.classList.remove('error');
