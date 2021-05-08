@@ -292,7 +292,7 @@ function payWithPaystack() {
     let totalPriceNo = totalPrice.innerText;
     let finalTotalPriceNo = totalPriceNo.replace(/,/g,'');
     let handler = PaystackPop.setup({
-        key: 'pk_test_08d2d1a95f28e6534dd378bfb0daac9b0d98b78e', // Replace with your public key
+        key: 'pk_test_e3fbaba354db9595539a3ec4607164f653cd2164', // Replace with your public key
         email: email.value,
         amount: finalTotalPriceNo * 100,
         ref: '' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
